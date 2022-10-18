@@ -6,6 +6,10 @@ thumbnailUrl: '/graphql-thumbnail.png'
 tags: ['graphql', 'api', 'javascript']
 ---
 
+<ImageContainer>
+  <Image src='/graphql-thumbnail.png' layout='fill' objectFit='cover' />
+</ImageContainer>
+
 <div>
   This is a blog post about <strong>GraphQL</strong>. <br />
   We'll learn about GraphQL and how to use it in applications.
@@ -17,15 +21,9 @@ tags: ['graphql', 'api', 'javascript']
 
 We just used a `###` subheading in our blog post.
 
-<SyntaxHighlighter language="javascript">
-  {`
-    const doStuff = () => {
-      return console.log('hey')
-    }
-  `}
-</SyntaxHighlighter>
 
-```
+
+```jsx:[slug].js
   // this is a code block
   const doSomething = () => {
     return console.log('hey')

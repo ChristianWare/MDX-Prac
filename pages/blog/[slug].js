@@ -1,12 +1,17 @@
+import Image from 'next/image'
 import fs from "fs";
 import path from "path";
 import { MDXRemote } from "next-mdx-remote";
 import { serialize } from "next-mdx-remote/serialize";
+import rehypeSlug from "rehype-slug";
+import rehypeAutolinkHeadings from "rehype-autolink-headings";
+import rehypePrism from 'rehype-prism-plus'
+import rehypeCodeTitles from 'rehype-code-titles'
 import styles from "../../styles/PostPage.module.css";
 import Button from "../../comps/Button";
-import SyntaxHighlighter from "react-syntax-highlighter";
+import ImageContainer from '../../comps/ImageContainer'
 
-const components = { Button, SyntaxHighlighter };
+const components = { Button, Image, ImageContainer };
 
 const PostPage = ({ serilaizedContent }) => {
   const { frontmatter } = serilaizedContent;
@@ -46,7 +51,12 @@ export const getStaticProps = async ({ params }) => {
     scope: "", // we can supply variables to the mdx files via scope,
     mdxOptions: {
       remarkPlugins: [],
-      rehyPlugins: [],
+      rehypePlugins: [
+        rehypeSlug,
+        [rehypeAutolinkHeadings, { behavior: "wrap" }],
+        rehypeCodeTitles,
+        rehypePrism
+      ],
     },
   });
 

@@ -5,6 +5,9 @@ description: "Here's an introduction to Framer Motion."
 thumbnailUrl: '/framer-motion-thumbnail.webp'
 tags: ['react', 'motion', 'animation']
 ---
+<ImageContainer>
+  <Image src='/framer-motion-thumbnail.webp' layout='fill' objectFit='cover' />
+</ImageContainer>
 
 <div>
   This is a blog post about <strong>Framer Motion</strong>. <br />
@@ -17,15 +20,9 @@ tags: ['react', 'motion', 'animation']
 
 We just used a `###` subheading in our blog post.
 
-<SyntaxHighlighter language="javascript">
-  {`
-    const doStuff = () => {
-      return console.log('hey')
-    }
-  `}
-</SyntaxHighlighter>
 
-```
+
+```jsx:[slug].js
   // this is a code block
   const doSomething = () => {
     return console.log('hey')

@@ -10,8 +10,9 @@ import rehypeCodeTitles from 'rehype-code-titles'
 import styles from "../../styles/PostPage.module.css";
 import Button from "../../comps/Button";
 import ImageContainer from '../../comps/ImageContainer'
+import CodeBlock from '../../comps/CodeBlock';
 
-const components = { Button, Image, ImageContainer };
+const components = { Button, Image, ImageContainer, CodeBlock };
 
 const PostPage = ({ serilaizedContent }) => {
   const { frontmatter } = serilaizedContent;

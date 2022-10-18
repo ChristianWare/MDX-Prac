@@ -1,0 +1,19 @@
+.codeBlock {
+            position: relative;
+          }
+
+          .copy {
+            cursor: pointer;
+            position: absolute;
+            top: -34px;
+            right: 20px;
+            font-size: 1rem;
+            background: none;
+            border-radius: var(--border-base);
+            border: none;
+            transition: transform 0.1s ease;
+          }
+
+          .copy:active {
+            transform: scale(0.9);
+          }

@@ -35,18 +35,17 @@ export const getStaticProps = async () => {
   const path = require("path");
   const matter = require("gray-matter");
 
-  // Find the path in the directory called "Posts" :
+  //1. Find the path in the directory called "posts":
   const files = fs.readdirSync(path.join("posts"));
 
-  // Read all of the files inside of the "Post" directory, and extract the front matter from every MDX file :
+  //2. Gain access to all the files inside of the "post" directory:
   const posts = files.map((filename) => {
     const markdownWithMeta = fs.readFileSync(
       path.join("posts", filename),
       "utf-8"
     );
+    //3. extract the front matter from every MDX file:
     const { data } = matter(markdownWithMeta);
-
-    console.log(data);
 
     return {
       frontmatter: data,

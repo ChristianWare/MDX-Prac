@@ -9,10 +9,9 @@ import rehypePrism from 'rehype-prism-plus'
 import rehypeCodeTitles from 'rehype-code-titles'
 import styles from "../../styles/PostPage.module.css";
 import Button from "../../comps/Button";
-import ImageContainer from '../../comps/ImageContainer'
-import CodeBlock from '../../comps/CodeBlock';
+import { MDXComponents } from '../../comps/mdx/MDXComponents';
 
-const components = { Button, Image, ImageContainer, CodeBlock };
+// const components = { Button, Image, ImageContainer, CodeBlock };
 
 const PostPage = ({ serilaizedContent }) => {
   const { frontmatter } = serilaizedContent;
@@ -20,7 +19,7 @@ const PostPage = ({ serilaizedContent }) => {
   return (
     <div className={styles.postPage}>
       <h1>{frontmatter.title}</h1>
-      <MDXRemote {...serilaizedContent} components={components} />
+      <MDXRemote {...serilaizedContent} components={MDXComponents} />
     </div>
   );
 };

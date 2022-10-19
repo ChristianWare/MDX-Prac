@@ -21,38 +21,22 @@ tags: ["graphql", "api", "javascript"]
 
 We just used a `###` subheading in our blog post.
 
-<CodeBlock>
+<Pre>
 ```jsx
+// Button.js
+
 import styles from "../styles/Button.module.css";
 
 const Button = ({ text }) => {
-return (
-<>
-<button className={styles.btn}>{text}</button>
-</>
-);
+  return (
+    <>
+      <button className={styles.btn}>{text}</button>
+    </>
+  );
 };
 export default Button;
-
 ```
-</CodeBlock>
+</Pre>
 
-### This is a Markdown sub-heading
-
-We just used a `###` subheading in our blog post.
-### This is a Markdown sub-heading
-
-We just used a `###` subheading in our blog post.
-
-<ImageContainer>
-  <Image src='/graphql-thumbnail.png' layout='fill' objectFit='cover' />
-</ImageContainer>
-
-We just used a `###` subheading in our blog post.
-### This is a Markdown sub-heading
-
-
-  Here, I'm using a component inside my MarkDown file:{" "}
-  {<Button text={"Click me"} />}
-
-```
+Here, I'm using a component inside my MarkDown file:{" "}
+{<Button text={"Click me"} />}

@@ -1,19 +1,21 @@
-.codeBlock {
-            position: relative;
-          }
+.btnContainer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+}
 
-          .copy {
-            cursor: pointer;
-            position: absolute;
-            top: -34px;
-            right: 20px;
-            font-size: 1rem;
-            background: none;
-            border-radius: var(--border-base);
-            border: none;
-            transition: transform 0.1s ease;
-          }
+.btn {
+  cursor: pointer;
+  font-size: 1rem;
+  background: none;
+  border-radius: var(--border-base);
+  border: none;
+  transition: transform 0.1s ease;
+}
 
-          .copy:active {
-            transform: scale(0.9);
-          }
+.container {
+  position: relative;
+}
+
+          
